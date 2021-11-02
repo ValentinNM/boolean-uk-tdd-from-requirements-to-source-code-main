@@ -11,7 +11,7 @@ describe('Shoping Cart Amount', () => {
         // I. setup => here we declaring the values
         
         const basket = [
-            { name:"Carrots", price : 2.5, quantity : 3 },
+            { name:"Carrots", price : 2.5, quantity : 4 },
             { name:"Tomatoes", price : 3.5, quantity : 2 }
         ]
 
@@ -20,7 +20,7 @@ describe('Shoping Cart Amount', () => {
         console.log("result1: ", result)
 
         // III. verify => 
-        expect(result).toEqual(14.5)
+        expect(result).toEqual(17)
     })
     
     it("returns 0 if cart has no items ", () => { 
