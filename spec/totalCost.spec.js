@@ -8,21 +8,34 @@ describe('Shoping Cart Amount', () => {
 
     // it => a.k.a SPEC
     it("returns the total cost of the cart if has >0 values ", () => { 
-        // I. setup
+        // I. setup => here we declaring the values
         
-        // II. execute
-        
-        // III. verify
-        
-    })
+        const basket = [
+            { name:"Carrots", price : 2.5, quantity : 3 },
+            { name:"Tomatoes", price : 3.5, quantity : 2 }
+        ]
 
+        // II. execute => call the imported function and pass data through to execute
+        const result = totalCost(basket)
+        console.log("result1: ", result)
+
+        // III. verify => 
+        expect(result).toEqual(14.5)
+    })
+    
     it("returns 0 if cart has no items ", () => { 
         // I. setup
         
+        const basket = [
+            // { name:"Carrots", price : 2.5, quantity : 1 },
+            // { name:"Tomatoes", price : 3.5, quantity : 2 }
+        ]
         // II. execute
-        
+        const result = totalCost(basket)
+        console.log("result2: ", result)
+
         // III. verify
-        
+        expect(result).toEqual(0)
     })
 })
 
